@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include  layout="@layout/view_title" android:id="@+id/layout_title" android:layout_alignParentTop="true" />
+    <LinearLayout 
+        android:id="@+id/layout_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/title_bg"
+        >
+        <LinearLayout style="@style/layout_main_tab_out" android:id="@+id/tab_msg">
+            <LinearLayout style="@style/layout_main_tab_inside">
+                <ImageButton style="@style/btn_main_tab" android:id="@+id/btn_main_information" android:src="@drawable/selector_tab_msg"/>
+                <TextView style="@style/WRAP" android:text="信息"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout style="@style/layout_main_tab_out" android:id="@+id/tab_history">
+            <LinearLayout style="@style/layout_main_tab_inside">
+                <ImageButton style="@style/btn_main_tab" android:id="@+id/btn_main_history" android:src="@drawable/selector_tab_history"/>
+                <TextView style="@style/WRAP" android:text="历史搜索"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout style="@style/layout_main_tab_out" android:id="@+id/tab_setting">
+            <LinearLayout style="@style/layout_main_tab_inside">
+                <ImageButton style="@style/btn_main_tab" android:id="@+id/btn_main_setting" android:src="@drawable/selector_tab_set"/>
+                <TextView style="@style/WRAP" android:text="设置"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+<!--         <ImageButton  -->
+<!--             style="@style/btn_main_tab" -->
+<!--             android:id="@+id/btn_main_history" -->
+<!--             android:src="@drawable/selector_tab_history" -->
+<!--             /> -->
+<!--         <ImageButton  -->
+<!--             style="@style/btn_main_tab" -->
+<!--             android:id="@+id/btn_main_setting" -->
+<!--             android:src="@drawable/selector_tab_set" -->
+<!--             /> -->
+    </LinearLayout>
+    <FrameLayout 
+        android:id="@+id/layout_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_main_bottom"
+        android:layout_below="@id/layout_title"
+        android:background="@drawable/chatting_bg_default"
+        >
+    </FrameLayout>
+
+</RelativeLayout>

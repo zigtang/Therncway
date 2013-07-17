@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+	
+    <!-- 服务器地址，端口设置 -->
+    <LinearLayout style="@style/layout_rounde_corner" >
+
+        <LinearLayout style="@style/layout_item_setting">
+            <TextView style="@style/tv_item_setting_left" android:text="服务器地址" />
+            <EditText
+                android:id="@+id/et_setting_adderss"
+                style="@style/layout_item_setting_right"
+                android:background="@drawable/selector_et_bg"
+                android:inputType="textUri" />
+        </LinearLayout>
+
+        <include layout="@layout/view_divider"/>
+        
+         <LinearLayout style="@style/layout_item_setting">
+            <TextView style="@style/tv_item_setting_left"  android:text="服务器端口" />
+            <EditText
+                android:id="@+id/et_setting_port"
+                style="@style/layout_item_setting_right"
+                android:background="@drawable/selector_et_bg"
+                android:inputType="number" />
+        </LinearLayout>
+
+          <include layout="@layout/view_divider"/>
+          
+        <LinearLayout android:id="@+id/btn_setting_test" style="@style/btnLayout_layout_out" >
+ 			<LinearLayout style="@style/btnlayout_layout_inside" >
+                <ImageView style="@style/btnLayout_imag" android:src="@drawable/img_confirm" />
+                <TextView style="@style/btnLayout_tv" android:text="测试连接" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <!-- 声音，通知方式，屏蔽设置 -->
+    <LinearLayout style="@style/layout_rounde_corner">
+        
+        <!-- 声音开关 -->
+        <LinearLayout style="@style/layout_item_setting">
+	        <TextView style="@style/tv_item_setting_left"  android:text="声音提示"/>
+	        <RadioGroup style="@style/layout_item_setting_right" android:orientation="horizontal">
+	            <RadioButton style="@style/rb_item_setting_right" android:text="开启" android:id="@+id/rb_setting_soundon"/>
+	            <RadioButton style="@style/rb_item_setting_right" android:text="关闭" android:id="@+id/rb_setting_soundoff"/>
+	        </RadioGroup>
+        </LinearLayout>
+        
+         <include layout="@layout/view_divider"/>
+         
+        <!-- 通知方式 -->
+        <LinearLayout style="@style/layout_item_setting">
+	        <TextView style="@style/tv_item_setting_left"  android:text="通知方式"/>
+	        <RadioGroup style="@style/layout_item_setting_right" android:orientation="horizontal">
+	            <RadioButton style="@style/rb_item_setting_right" android:text="标题栏"  android:id="@+id/rb_setting_notification"/>
+	            <RadioButton style="@style/rb_item_setting_right" android:text="弹窗" android:id="@+id/rb_setting_popupwindow"/>
+	        </RadioGroup>
+        </LinearLayout>
+        
+         <include layout="@layout/view_divider"/>
+         
+        <!-- 屏蔽设置 -->
+        <LinearLayout style="@style/layout_item_setting">
+	        <TextView style="@style/tv_item_setting_left"  android:text="屏蔽字符"/>
+	        <EditText android:id="@+id/et_setting_maskword"
+                style="@style/layout_item_setting_right"
+                android:background="@drawable/selector_et_bg"/>
+        </LinearLayout>
+            
+    </LinearLayout>
+
+    <LinearLayout style="@style/layout_rounde_corner">
+        <LinearLayout style="@style/layout_item_setting">
+            
+            <!-- 清空本地 -->
+            <LinearLayout  style="@style/btn_item_short" android:id="@+id/btn_setting_clean">
+	 			<LinearLayout style="@style/btnlayout_layout_inside" >
+	                <ImageView style="@style/btnLayout_imag" android:src="@drawable/img_trash" />
+	                <TextView style="@style/btnLayout_tv" android:text="清空" />
+	            </LinearLayout>
+        	</LinearLayout>
+        
+            <!--  保存设置-->
+            <LinearLayout  style="@style/btn_item_short" android:id="@+id/btn_setting_save">
+	 			<LinearLayout style="@style/btnlayout_layout_inside" >
+	                <ImageView style="@style/btnLayout_imag" android:src="@drawable/img_confirm" />
+	                <TextView style="@style/btnLayout_tv" android:text="保存" />
+	            </LinearLayout>
+        	</LinearLayout>
+        	
+        	<!-- 注销登录 -->
+            <LinearLayout  style="@style/btn_item_short" android:id="@+id/btn_setting_exit">
+	 			<LinearLayout style="@style/btnlayout_layout_inside" >
+	                <ImageView style="@style/btnLayout_imag" android:src="@drawable/img_exit" />
+	                <TextView style="@style/btnLayout_tv" android:text="注销" />
+	            </LinearLayout>
+        	</LinearLayout>
+        </LinearLayout>
+    
+	</LinearLayout>
+	</LinearLayout>
+</ScrollView>

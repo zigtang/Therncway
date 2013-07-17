@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/chatting_bg_default"
+    >
+	<include layout="@layout/view_title" android:id="@+id/layout_title"/>
+	
+    <LinearLayout
+        android:id="@+id/layout_detail_top"
+       android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+       	android:gravity="center_vertical"
+       	android:layout_below="@id/layout_title"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="主题："
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_detail_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发生发放发生发送方萨发生"
+            android:textSize="17sp" 
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            />
+        
+    </LinearLayout>
+    
+    <View 
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/devider_line"
+        android:layout_below="@id/layout_detail_top"
+        />
+    
+    <LinearLayout
+        android:id="@+id/layout_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+       	android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="时间："
+            android:textSize="20sp" 
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_detail_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发生发放发生发送方萨发生"
+            android:textSize="17sp" 
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            />
+        
+    </LinearLayout>
+    
+    
+    
+    
+    <TextView 
+        android:id="@+id/tv_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_detail_bottom"
+        android:layout_below="@id/divider_line"
+        android:layout_marginTop="1dp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        />
+    
+    
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/devider_line"
+        android:layout_above="@id/layout_detail_bottom"
+        />
+    
+
+</RelativeLayout>
